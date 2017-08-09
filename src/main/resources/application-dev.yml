@@ -1,0 +1,41 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.11.130:3306/shopmall
+    username: wls
+    password: Wls141215!
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+age:  18
+name: 张三
+content: "name: ${name}, age: ${age}"
+
+orderInfo:
+  orderNumber: 1245
+  receiver: 王龙山
+  province: 北京
+  city: 北京
+  area: 大兴区
+  street: 广平大街9号
+  addressDetail:  九州通医药有限公司
+  orderStatus:  1
+  invoiceInfo:
+      invoiceTitle: 北京好药师大药房连锁有限公司
+      invoiceType: 1
+  details:
+    - orderDetail:
+        productId:  1
+        productCode:  BC001
+        productName:  商品1
+        unitPrice:  10.01
+        count:  1
+#   - orderDetail:
+#        productId:  2
+#        productCode:  BC002
+#        productName:  商品2
+#        unitPrice:  10.01
+#        count:  1

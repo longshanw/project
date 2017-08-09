@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+<!--数据库驱动-->
+<classPathEntry    location="E:/SoftWare/apache-maven-3.5.0/repo/mysql/mysql-connector-java/5.1.43/mysql-connector-java-5.1.43.jar"/>
+<context id="mysql">
+    <commentGenerator>
+        <property name="suppressDate" value="true"/>
+        <property name="suppressAllComments" value="true"/>
+    </commentGenerator>
+    <!--数据库链接地址账号密码-->
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://192.168.11.130:3306/shopmall" userId="wls" password="Wls141215!">
+    </jdbcConnection>
+    <javaTypeResolver>
+        <property name="forceBigDecimals" value="false"/>
+    </javaTypeResolver>
+    <!--生成Model类存放位置-->
+    <javaModelGenerator targetPackage="com.wls.shopmall.model" targetProject="E:\workspaces\IdeaProjects\shop\shopmall\src\main\java">
+        <property name="enableSubPackages" value="true"/>
+        <property name="trimStrings" value="true"/>
+    </javaModelGenerator>
+    <!--生成映射文件存放位置-->
+    <sqlMapGenerator targetPackage="sqlmapper" targetProject="E:\workspaces\IdeaProjects\shop\shopmall\src\main\resources\static">
+        <property name="enableSubPackages" value="true"/>
+    </sqlMapGenerator>
+    <!--生成mapper类存放位置-->
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.wls.shopmall.mapper" targetProject="E:\workspaces\IdeaProjects\shop\shopmall\src\main\java">
+        <property name="enableSubPackages" value="true"/>
+    </javaClientGenerator>
+    <!--生成对应表及类名-->
+
+    <table tableName="mp_order_info" domainObjectName="MPOrderInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+
+</context>
+</generatorConfiguration>

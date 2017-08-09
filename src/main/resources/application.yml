@@ -1,0 +1,8 @@
+server:
+  port: 8080
+  context-path: /shopmall
+spring:
+  profiles:
+    active: dev
+
+#spring.jpa.hibernate.naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl

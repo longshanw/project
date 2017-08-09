@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.11.130:3306/shopmall
+    username: wls
+    password: Wls141215!
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
