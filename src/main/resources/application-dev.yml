@@ -9,6 +9,18 @@ spring:
       ddl-auto: update
     show-sql: true
 
+mybatis:
+  type-aliases-package: com.wls.shopmall.model
+  mapper-locations: classpath:static/sqlmapper/*.xml
+  check-config-location: true
+#  config-location: classpath:mybatis/mybatis-config.xml
+logging:
+  level:
+    com.imooc.repository: debug
+    com.imooc.service.impl: debug
+    com.imooc.controller: debug
+    com.imooc.activemq: debug
+
 
 age:  18
 name: 张三

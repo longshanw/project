@@ -25,11 +25,11 @@ public class OrderInfoControllerTest {
 
     @Test
     public void getOrderList() throws Exception {
-//        mockMvc.perform(MockMvcRequestBuilders.get("/order/list"))
-//                .andExpect(MockMvcResultMatchers.status().isOk());
         mockMvc.perform(MockMvcRequestBuilders.get("/order/list"))
-                .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.content().string("abc"));
+                .andExpect(MockMvcResultMatchers.status().isOk());
+//        mockMvc.perform(MockMvcRequestBuilders.get("/order/list"))
+//                .andExpect(MockMvcResultMatchers.status().isOk())
+//                .andExpect(MockMvcResultMatchers.content().string("abc"));
     }
 
 }

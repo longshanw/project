@@ -3,6 +3,7 @@ package com.wls.shopmall.controller;
 import com.wls.shopmall.model.OrderInfo;
 import com.wls.shopmall.service.IOrderInfoService;
 import com.wls.shopmall.util.http.RespUtil;
+import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping(value = "/order")
+@MapperScan(value = "com.wls.shopmall.mapper")
 public class OrderInfoController {
 
     private final static Logger logger = LoggerFactory.getLogger(OrderInfoController.class);

@@ -2,7 +2,9 @@ package com.wls.shopmall.service.impl;
 
 import com.wls.shopmall.enums.RespEnum;
 import com.wls.shopmall.exception.MyException;
+import com.wls.shopmall.mapper.MPOrderInfoMapper;
 import com.wls.shopmall.mapper.jpa.IOrderInfoMapper;
+import com.wls.shopmall.model.MPOrderInfo;
 import com.wls.shopmall.model.OrderInfo;
 import com.wls.shopmall.service.IOrderInfoService;
 import org.slf4j.Logger;
@@ -24,6 +26,9 @@ public class OrderInfoServiceImpl implements IOrderInfoService {
     @Autowired
     private IOrderInfoMapper iOrderInfoMapper;
 
+    @Autowired
+    private MPOrderInfoMapper mpOrderInfoMapper;
+
     @Override
     public List<OrderInfo> getOrders() throws Exception {
         return iOrderInfoMapper.findAll();
@@ -35,7 +40,7 @@ public class OrderInfoServiceImpl implements IOrderInfoService {
     }
 
     @Override
-    public OrderInfo updateOrder(Integer id,OrderInfo orderInfo) throws Exception {
+    public OrderInfo updateOrder(Integer id, OrderInfo orderInfo) throws Exception {
         orderInfo.setId(id);
         return iOrderInfoMapper.save(orderInfo);
     }
@@ -60,9 +65,10 @@ public class OrderInfoServiceImpl implements IOrderInfoService {
 
     @Override
     public void getStatus(Integer id) throws Exception {
-        OrderInfo orderInfo = iOrderInfoMapper.findOne(id);
+//        OrderInfo orderInfo = iOrderInfoMapper.findOne(id);
+        MPOrderInfo orderInfo = mpOrderInfoMapper.selectByPrimaryKey(new Long(id));
         String orderStatus = orderInfo.getOrderStatus();
-        switch (orderStatus){
+        switch (orderStatus) {
             case "1":
                 throw new MyException(RespEnum.JD_CODE);
             case "2":
@@ -75,7 +81,8 @@ public class OrderInfoServiceImpl implements IOrderInfoService {
     }
 
     @Override
-    public OrderInfo findOne(Integer id) throws Exception {
-        return iOrderInfoMapper.findOne(id);
+    public MPOrderInfo findOne(Integer id) throws Exception {
+        MPOrderInfo orderInfo = mpOrderInfoMapper.selectByPrimaryKey(new Long(id));
+        return orderInfo;
     }
 }

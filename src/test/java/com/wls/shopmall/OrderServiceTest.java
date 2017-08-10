@@ -1,5 +1,6 @@
 package com.wls.shopmall;
 
+import com.wls.shopmall.model.MPOrderInfo;
 import com.wls.shopmall.model.OrderInfo;
 import com.wls.shopmall.service.IOrderInfoService;
 import org.junit.Test;
@@ -21,7 +22,7 @@ public class OrderServiceTest {
 
     @Test
     public void findOneTest() throws Exception {
-        OrderInfo orderInfo = iOrderInfoService.findOne(7);
+        MPOrderInfo orderInfo = iOrderInfoService.findOne(7);
         org.junit.Assert.assertEquals(1+"",orderInfo.getOrderStatus());
 
     }
