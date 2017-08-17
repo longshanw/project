@@ -61,4 +61,13 @@ public class RespUtil<T> {
         resp.setMsg(message);
         return resp;
     }
+
+    @Override
+    public String toString() {
+        return "RespUtil{" +
+                "code=" + code +
+                ", msg='" + msg + '\'' +
+                ", data=" + data +
+                '}';
+    }
 }

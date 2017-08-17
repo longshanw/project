@@ -1,5 +1,6 @@
 package com.wls.shopmall.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.wls.shopmall.model.OrderInfo;
 import com.wls.shopmall.service.IOrderInfoService;
 import com.wls.shopmall.util.http.RespUtil;
@@ -7,8 +8,10 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -29,6 +32,15 @@ public class OrderInfoController {
     @Autowired
     private IOrderInfoService iOrderInfoService;
 
+    @GetMapping(value = "/page/one/{id}")
+    public ModelAndView showOrder(@PathVariable(value = "id") Integer id,Model model) throws Exception {
+        RespUtil<Object> resp = RespUtil.success(iOrderInfoService.findOne(id));
+        model.addAttribute("name", JSONObject.toJSONString(resp));
+        logger.info(resp.toString());
+        ModelAndView mv = new ModelAndView("index");
+        return mv;
+    }
+
     @GetMapping(value = "/{orderNumber}")
     public String getOrderInfo(@PathVariable("orderNumber") String orderNumber) {
         return "Hello " + orderNumber;
@@ -43,6 +55,8 @@ public class OrderInfoController {
     public RespUtil<Object> findOne(@PathVariable(value = "id") Integer id) throws Exception{
         return RespUtil.success(iOrderInfoService.findOne(id));
     }
+
+
 
     @PostMapping(value = "/add",produces = "application/json")
     public RespUtil<Object> addOrder(@Valid @RequestBody OrderInfo orderInfo, BindingResult result) throws Exception {

@@ -8,7 +8,18 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-
+  thymeleaf:
+    mode: HTML5
+    encoding: utf-8
+    content-type: text/html
+    cache: false
+  output:
+    ansi:
+      enabled: always
+  mvc:
+    view:
+      prefix: /templates/
+      suffix: .*
 mybatis:
   type-aliases-package: com.wls.shopmall.model
   mapper-locations: classpath:static/sqlmapper/*.xml
@@ -16,10 +27,7 @@ mybatis:
 #  config-location: classpath:mybatis/mybatis-config.xml
 logging:
   level:
-    com.imooc.repository: debug
-    com.imooc.service.impl: debug
-    com.imooc.controller: debug
-    com.imooc.activemq: debug
+    com.wls.shopmall: debug
 
 
 age:  18
@@ -28,7 +36,7 @@ content: "name: ${name}, age: ${age}"
 
 orderInfo:
   orderNumber: 1245
-  receiver: 王龙山
+  receiver: wls
   province: 北京
   city: 北京
   area: 大兴区
