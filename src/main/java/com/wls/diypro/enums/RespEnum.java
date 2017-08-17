@@ -1,4 +1,4 @@
-package com.wls.shopmall.enums;
+package com.wls.diypro.enums;
 
 /**
  * Created by wls on 2017/8/7.

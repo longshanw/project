@@ -1,12 +1,12 @@
-package com.wls.shopmall.service.impl;
+package com.wls.diypro.service.impl;
 
-import com.wls.shopmall.enums.RespEnum;
-import com.wls.shopmall.exception.MyException;
-import com.wls.shopmall.mapper.MPOrderInfoMapper;
-import com.wls.shopmall.mapper.jpa.IOrderInfoMapper;
-import com.wls.shopmall.model.MPOrderInfo;
-import com.wls.shopmall.model.OrderInfo;
-import com.wls.shopmall.service.IOrderInfoService;
+import com.wls.diypro.enums.RespEnum;
+import com.wls.diypro.exception.MyException;
+import com.wls.diypro.mapper.jpa.IOrderInfoMapper;
+import com.wls.diypro.mapper.MPOrderInfoMapper;
+import com.wls.diypro.model.MPOrderInfo;
+import com.wls.diypro.model.OrderInfo;
+import com.wls.diypro.service.IOrderInfoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

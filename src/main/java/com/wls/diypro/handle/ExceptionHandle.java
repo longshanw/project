@@ -1,8 +1,7 @@
-package com.wls.shopmall.handle;
+package com.wls.diypro.handle;
 
-import com.wls.shopmall.exception.MyException;
-import com.wls.shopmall.service.impl.OrderInfoServiceImpl;
-import com.wls.shopmall.util.http.RespUtil;
+import com.wls.diypro.exception.MyException;
+import com.wls.diypro.util.http.RespUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ControllerAdvice;

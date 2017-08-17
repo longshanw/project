@@ -1,4 +1,4 @@
-package com.wls.shopmall.model;
+package com.wls.diypro.model;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.format.annotation.DateTimeFormat;

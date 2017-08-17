@@ -1,4 +1,4 @@
-package com.wls.shopmall.model;
+package com.wls.diypro.model;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package com.wls.shopmall.aspect;
+package com.wls.diypro.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 
 /**
@@ -20,7 +19,7 @@ public class HttpAspect {
 
     private final static Logger logger = LoggerFactory.getLogger(HttpAspect.class);
 
-    @Pointcut("execution(public * com.wls.shopmall.controller.OrderInfoController.*(..))")
+    @Pointcut("execution(public * com.wls.diypro.controller.OrderInfoController.*(..))")
     public void log(){
 
     }

@@ -1,4 +1,4 @@
-package com.wls.shopmall.util.http;
+package com.wls.diypro.util.http;
 
 /**
  * Created by wls on 2017/8/7.

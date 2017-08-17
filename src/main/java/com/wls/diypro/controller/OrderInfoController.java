@@ -1,9 +1,9 @@
-package com.wls.shopmall.controller;
+package com.wls.diypro.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.wls.shopmall.model.OrderInfo;
-import com.wls.shopmall.service.IOrderInfoService;
-import com.wls.shopmall.util.http.RespUtil;
+import com.wls.diypro.model.OrderInfo;
+import com.wls.diypro.service.IOrderInfoService;
+import com.wls.diypro.util.http.RespUtil;
 import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

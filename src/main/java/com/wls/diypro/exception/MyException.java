@@ -1,6 +1,6 @@
-package com.wls.shopmall.exception;
+package com.wls.diypro.exception;
 
-import com.wls.shopmall.enums.RespEnum;
+import com.wls.diypro.enums.RespEnum;
 
 /**
  * Created by wls on 2017/8/7.

@@ -1,7 +1,7 @@
-package com.wls.shopmall.service;
+package com.wls.diypro.service;
 
-import com.wls.shopmall.model.MPOrderInfo;
-import com.wls.shopmall.model.OrderInfo;
+import com.wls.diypro.model.MPOrderInfo;
+import com.wls.diypro.model.OrderInfo;
 
 import java.util.List;
 

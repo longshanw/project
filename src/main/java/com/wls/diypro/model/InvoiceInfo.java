@@ -1,4 +1,4 @@
-package com.wls.shopmall.model;
+package com.wls.diypro.model;
 
 /**
  * Created by wls on 2017/8/5.

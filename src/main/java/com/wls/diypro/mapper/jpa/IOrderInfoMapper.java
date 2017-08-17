@@ -1,6 +1,6 @@
-package com.wls.shopmall.mapper.jpa;
+package com.wls.diypro.mapper.jpa;
 
-import com.wls.shopmall.model.OrderInfo;
+import com.wls.diypro.model.OrderInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

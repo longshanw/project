@@ -1,6 +1,6 @@
-package com.wls.shopmall.mapper;
+package com.wls.diypro.mapper;
 
-import com.wls.shopmall.model.MPOrderInfo;
+import com.wls.diypro.model.MPOrderInfo;
 import org.springframework.stereotype.Repository;
 
 @Repository
