@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.11.130:3306/shopmall
+    url: jdbc:mysql://192.168.159.128:3306/mydb
     username: wls
     password: Wls141215!
   jpa:

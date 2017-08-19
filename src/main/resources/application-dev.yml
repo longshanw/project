@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.11.130:3306/shopmall
+    url: jdbc:mysql://192.168.159.128:3306/mydb
     username: wls
     password: Wls141215!
   jpa:
@@ -20,8 +20,19 @@ spring:
     view:
       prefix: /templates/
       suffix: .*
+  mail:
+    host: smtp.qq.com
+    username: 158822436@qq.com
+    password: Wls141215sxj
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
 mybatis:
-  type-aliases-package: com.wls.shopmall.model
+  type-aliases-package: com.wls.diypro.model
   mapper-locations: classpath:static/sqlmapper/*.xml
   check-config-location: true
 #  config-location: classpath:mybatis/mybatis-config.xml
