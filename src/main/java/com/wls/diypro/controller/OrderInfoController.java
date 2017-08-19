@@ -21,7 +21,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping(value = "/order")
-@MapperScan(value = "com.wls.shopmall.mapper")
+@MapperScan(value = "com.wls.diypro.mapper")
 public class OrderInfoController {
 
     private final static Logger logger = LoggerFactory.getLogger(OrderInfoController.class);
