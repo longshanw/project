@@ -1,4 +1,4 @@
-package com.wls.shopmall.controller;
+package com.wls.diypro.test.controller;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

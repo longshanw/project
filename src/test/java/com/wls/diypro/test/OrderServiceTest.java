@@ -1,4 +1,4 @@
-package com.wls.shopmall;
+package com.wls.diypro.test;
 
 import com.wls.diypro.model.MPOrderInfo;
 import com.wls.diypro.service.IOrderInfoService;
