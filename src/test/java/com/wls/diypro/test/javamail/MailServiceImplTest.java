@@ -1,5 +1,6 @@
-package com.wls.diypro.service;
+package com.wls.diypro.test.javamail;
 
+import com.wls.diypro.service.IMailService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
