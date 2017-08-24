@@ -1,8 +1,8 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.159.128:3306/mydb
-#    url: jdbc:mysql://192.168.11.131:3306/mydb
+#    url: jdbc:mysql://192.168.159.128:3306/mydb
+    url: jdbc:mysql://192.168.11.131:3306/mydb
     username: wls
     password: Wls141215!
   jpa:
@@ -34,7 +34,8 @@ spring:
             required: true
   redis:
     database: 0
-    host: 192.168.159.128
+#    host: 192.168.159.128
+    host: 192.168.11.131
     port: 6379
     password: Wls141215!
     pool:
@@ -61,6 +62,9 @@ logging:
 age:  18
 name: 张三
 content: "name: ${name}, age: ${age}"
+
+com.diy.title: 纯洁的微笑
+com.diy.description: 分享生活和技术
 
 orderInfo:
   orderNumber: 1245
