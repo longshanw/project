@@ -2,9 +2,9 @@ package com.wls.diypro.service.impl;
 
 import com.wls.diypro.enums.RespEnum;
 import com.wls.diypro.exception.MyException;
+import com.wls.diypro.JdbcTemplate.dao.IOrderInfoDao;
 import com.wls.diypro.mapper.jpa.IOrderInfoMapper;
-import com.wls.diypro.mapper.MPOrderInfoMapper;
-import com.wls.diypro.model.MPOrderInfo;
+import com.wls.diypro.mapper.OrderInfoMapper;
 import com.wls.diypro.model.OrderInfo;
 import com.wls.diypro.service.IOrderInfoService;
 import org.slf4j.Logger;
@@ -27,7 +27,10 @@ public class OrderInfoServiceImpl implements IOrderInfoService {
     private IOrderInfoMapper iOrderInfoMapper;
 
     @Autowired
-    private MPOrderInfoMapper mpOrderInfoMapper;
+    private OrderInfoMapper orderInfoMapper;
+
+    @Autowired
+    private IOrderInfoDao iOrderInfoDao;
 
     @Override
     public List<OrderInfo> getOrders() throws Exception {
@@ -36,7 +39,8 @@ public class OrderInfoServiceImpl implements IOrderInfoService {
 
     @Override
     public OrderInfo addOrder(OrderInfo orderInfo) throws Exception {
-        return iOrderInfoMapper.save(orderInfo);
+        return  iOrderInfoDao.insert(orderInfo);
+//        return iOrderInfoMapper.save(orderInfo);
     }
 
     @Override
@@ -66,7 +70,7 @@ public class OrderInfoServiceImpl implements IOrderInfoService {
     @Override
     public void getStatus(Integer id) throws Exception {
 //        OrderInfo orderInfo = iOrderInfoMapper.findOne(id);
-        MPOrderInfo orderInfo = mpOrderInfoMapper.selectByPrimaryKey(new Long(id));
+        OrderInfo orderInfo = orderInfoMapper.selectByPrimaryKey(new Long(id));
         String orderStatus = orderInfo.getOrderStatus();
         switch (orderStatus) {
             case "1":
@@ -81,8 +85,10 @@ public class OrderInfoServiceImpl implements IOrderInfoService {
     }
 
     @Override
-    public MPOrderInfo findOne(Integer id) throws Exception {
-        MPOrderInfo orderInfo = mpOrderInfoMapper.selectByPrimaryKey(new Long(id));
+    public OrderInfo findOne(Integer id) throws Exception {
+//        MPOrderInfo orderInfo = mpOrderInfoMapper.selectByPrimaryKey(new Long(id));
+        OrderInfo orderInfo = iOrderInfoDao.selectByPrimaryKey(new Long(id));
         return orderInfo;
+
     }
 }

@@ -1,6 +1,5 @@
 package com.wls.diypro.service;
 
-import com.wls.diypro.model.MPOrderInfo;
 import com.wls.diypro.model.OrderInfo;
 
 import java.util.List;
@@ -27,5 +26,5 @@ public interface IOrderInfoService {
 
      public void getStatus(Integer id) throws Exception;
 
-     MPOrderInfo findOne(Integer id) throws Exception;
+     OrderInfo findOne(Integer id) throws Exception;
 }

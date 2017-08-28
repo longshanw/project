@@ -30,13 +30,13 @@ public class UserRepositoryTests {
         DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
         String formattedDate = dateFormat.format(date);
 
-        iUserRepository.save(new User("aa1", "aa@126.com", "aa", "aa123456",formattedDate));
-        iUserRepository.save(new User("bb2", "bb@126.com", "bb", "bb123456",formattedDate));
-        iUserRepository.save(new User("cc3", "cc@126.com", "cc", "cc123456",formattedDate));
+//        iUserRepository.save(new User("aa1", "aa@126.com", "aa", "aa123456",formattedDate));
+//        iUserRepository.save(new User("bb2", "bb@126.com", "bb", "bb123456",formattedDate));
+//        iUserRepository.save(new User("cc3", "cc@126.com", "cc", "cc123456",formattedDate));
 
-        Assert.assertEquals(3, iUserRepository.findAll().size());
-        Assert.assertEquals("bb@126.com", iUserRepository.findByUserNameOrEmail("bb123456", "bb2").getNickName());
-        iUserRepository.delete(iUserRepository.findByUserName("bb123456"));
+//        Assert.assertEquals(3, iUserRepository.findAll().size());
+//        Assert.assertEquals("bb@126.com", iUserRepository.findByUserNameOrEmail("bb123456", "bb2").getNickName());
+//        iUserRepository.delete(iUserRepository.findByUserName("bb123456"));
     }
 
 }
