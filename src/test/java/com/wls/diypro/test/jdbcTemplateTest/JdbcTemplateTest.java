@@ -20,11 +20,11 @@ public class JdbcTemplateTest {
 
     @Autowired
     @Qualifier("primaryJdbcTemplate")
-    protected JdbcTemplate jdbcTemplate1;
+    protected JdbcTemplate primaryJdbcTemplate;
 
     @Autowired
     @Qualifier("secondaryJdbcTemplate")
-    protected JdbcTemplate jdbcTemplate2;
+    protected JdbcTemplate secondaryJdbcTemplate;
 
     @Autowired
     private IOrderInfoService iOrderInfoService;
@@ -48,25 +48,25 @@ public class JdbcTemplateTest {
 
     @Before
     public void setUp() {
-        jdbcTemplate1.update("DELETE  FROM  order_info ");
-        jdbcTemplate2.update("DELETE  FROM  order_info ");
+        primaryJdbcTemplate.update("DELETE  FROM  order_info ");
+        secondaryJdbcTemplate.update("DELETE  FROM  order_info ");
     }
 
     @Test
     public void test() throws Exception {
 
         // 往第一个数据源中插入两条数据
-        jdbcTemplate1.update("insert into order_info(order_flag,order_number,order_status,street) values(?, ?, ?, ?)", "test", "10001", "S01","广平大街");
-        jdbcTemplate1.update("insert into order_info(order_flag,order_number,order_status,street) values(?, ?, ?, ?)", "test", "10001", "S01","广平大街");
+        primaryJdbcTemplate.update("insert into order_info(order_flag,order_number,order_status,street) values(?, ?, ?, ?)", "test", "10001", "S01","广平大街");
+        primaryJdbcTemplate.update("insert into order_info(order_flag,order_number,order_status,street) values(?, ?, ?, ?)", "test", "10001", "S01","广平大街");
 
         // 往第二个数据源中插入一条数据，若插入的是第一个数据源，则会主键冲突报错
-        jdbcTemplate2.update("insert into order_info(order_flag,order_number,order_status,street) values(?, ?, ?, ?)", "test", "10003", "S02","广平大街");
+        secondaryJdbcTemplate.update("insert into order_info(order_flag,order_number,order_status,street) values(?, ?, ?, ?)", "test", "10003", "S02","广平大街");
 
         // 查一下第一个数据源中是否有两条数据，验证插入是否成功
-        Assert.assertEquals("2", jdbcTemplate1.queryForObject("select count(1) from order_info", String.class));
+        Assert.assertEquals("2", primaryJdbcTemplate.queryForObject("select count(1) from order_info", String.class));
 
         // 查一下第一个数据源中是否有两条数据，验证插入是否成功
-        Assert.assertEquals("1", jdbcTemplate2.queryForObject("select count(1) from order_info", String.class));
+        Assert.assertEquals("1", secondaryJdbcTemplate.queryForObject("select count(1) from order_info", String.class));
 
     }
 }
