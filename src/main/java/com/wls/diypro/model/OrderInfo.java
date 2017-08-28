@@ -24,6 +24,7 @@ public class OrderInfo {
     private Integer id;
     @NotNull(message = "订单号不能为空！")
     private String orderNumber;
+    private String orderFlag;
     private Date orderTime;
     private String receiver;
     private String province;
@@ -113,6 +114,14 @@ public class OrderInfo {
 
     public void setOrderStatus(String orderStatus) {
         this.orderStatus = orderStatus;
+    }
+
+    public String getOrderFlag() {
+        return orderFlag;
+    }
+
+    public void setOrderFlag(String orderFlag) {
+        this.orderFlag = orderFlag;
     }
 
     /*public List<OrderDetail> getDetails() {
