@@ -22,11 +22,11 @@ public class ScheduledTasks {
 //    @Scheduled(fixedRate = 5000)
     @Scheduled(cron = "${cron}")
     public void reportCurrentTimeByCron() {
-        log.info("cron--The time is now {}", dateFormat.format(new Date()));
+//        log.info("cron--The time is now {}", dateFormat.format(new Date()));
     }
 
     @Scheduled(initialDelay = 1000,fixedDelay = 5000)
     public void reportCurrentTime() {
-        log.info("delay--The time is now {}", dateFormat.format(new Date()));
+//        log.info("delay--The time is now {}", dateFormat.format(new Date()));
     }
 }

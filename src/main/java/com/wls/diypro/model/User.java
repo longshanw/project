@@ -27,6 +27,10 @@ public class User implements Serializable {
     private String nickName;
     @Column(nullable = false)
     private String regTime;
+    @Column(nullable = false)
+    private String name;
+    @Column(nullable = false)
+    private Integer age;
 
     public User() {
         super();
@@ -76,4 +80,19 @@ public class User implements Serializable {
         this.regTime = regTime;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
 }
