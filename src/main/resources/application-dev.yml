@@ -62,7 +62,7 @@ logging:
 age:  18
 name: 张三
 content: "name: ${name}, age: ${age}"
-
+cron: 0/3 * * * * ?
 com.diy.title: 纯洁的微笑
 com.diy.description: 分享生活和技术
 
