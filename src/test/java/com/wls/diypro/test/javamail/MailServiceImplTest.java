@@ -22,12 +22,12 @@ public class MailServiceImplTest {
 
     @Test
     public void sendSimpleMail() throws Exception {
-        iMailService.sendSimpleMail("158822436@qq.com","testSubject","testContent");
+//        iMailService.sendSimpleMail("158822436@qq.com","testSubject","testContent");
     }
 
     @Test
     public void sendHtmlMail() throws Exception {
-        iMailService.sendHtmlMail("158822436@qq.com","testSubjectHTML","testContentHTML");
+//        iMailService.sendHtmlMail("158822436@qq.com","testSubjectHTML","testContentHTML");
     }
 
 }

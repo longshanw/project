@@ -1,10 +1,17 @@
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-#    url: jdbc:mysql://192.168.159.128:3306/mydb
-    url: jdbc:mysql://192.168.11.131:3306/mydb
-    username: wls
-    password: Wls141215!
+    primary:
+      driver-class-name: com.mysql.jdbc.Driver
+  #    url: jdbc:mysql://192.168.159.128:3306/mydb
+      url: jdbc:mysql://192.168.11.131:3306/mydb
+      username: wls
+      password: Wls141215!
+    secondary:
+      driver-class-name: com.mysql.jdbc.Driver
+  #    url: jdbc:mysql://192.168.159.128:3306/mydb
+      url: jdbc:mysql://192.168.11.131:3306/shopmall
+      username: wls
+      password: Wls141215!
   jpa:
     hibernate:
       ddl-auto: update
