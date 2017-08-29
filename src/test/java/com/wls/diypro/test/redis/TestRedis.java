@@ -1,7 +1,6 @@
 package com.wls.diypro.test.redis;
 
 
-import com.sun.glass.ui.Application;
 import com.wls.diypro.model.User;
 import org.junit.Assert;
 import org.junit.Test;
