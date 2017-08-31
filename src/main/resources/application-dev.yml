@@ -57,7 +57,7 @@ spring:
     # 连接超时时间（毫秒）
     timeout: 0
 mybatis:
-  type-aliases-package: com.wls.diypro.model
+  type-aliases-package: com.wls.projects.diypro.model
   mapper-locations: classpath:static/sqlmapper/*.xml
   check-config-location: true
 #  config-location: classpath:mybatis/mybatis-config.xml

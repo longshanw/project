@@ -6,13 +6,15 @@ package com.wls.diypro.model;
 import java.text.DateFormat;
 import java.util.Date;
 
-import com.wls.diypro.DiyProApplication;
-import com.wls.diypro.mapper.jpa.IUserRepository;
+import com.wls.integrateplugs.jpa.IUserRepository;
+import com.wls.projects.diypro.model.User;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Profile;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 
@@ -30,13 +32,13 @@ public class UserRepositoryTests {
         DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
         String formattedDate = dateFormat.format(date);
 
-//        iUserRepository.save(new User("aa1", "aa@126.com", "aa", "aa123456",formattedDate));
-//        iUserRepository.save(new User("bb2", "bb@126.com", "bb", "bb123456",formattedDate));
-//        iUserRepository.save(new User("cc3", "cc@126.com", "cc", "cc123456",formattedDate));
+        iUserRepository.save(new User("aa","aa","aa","aa","aa","aa",12));
+//        iUserRepository.save(new User("bb","bb","bb","bb","bb","bb",13));
+//        iUserRepository.save(new User("cc","cc","cc","cc","cc","cc",14));
 
 //        Assert.assertEquals(3, iUserRepository.findAll().size());
-//        Assert.assertEquals("bb@126.com", iUserRepository.findByUserNameOrEmail("bb123456", "bb2").getNickName());
-//        iUserRepository.delete(iUserRepository.findByUserName("bb123456"));
+        Assert.assertEquals("aa", iUserRepository.findByUserNameOrEmail("aa", "aa").getNickName());
+        iUserRepository.delete(iUserRepository.findByUserName("bb"));
     }
 
 }

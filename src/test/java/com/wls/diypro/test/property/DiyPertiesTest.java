@@ -1,6 +1,6 @@
 package com.wls.diypro.test.property;
 
-import com.wls.diypro.util.diy.DiyProperties;
+import com.wls.integrateplugs.property.DiyProperties;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

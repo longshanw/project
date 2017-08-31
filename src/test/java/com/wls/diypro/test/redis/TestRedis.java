@@ -1,7 +1,7 @@
 package com.wls.diypro.test.redis;
 
 
-import com.wls.diypro.model.User;
+import com.wls.projects.diypro.model.User;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -46,7 +46,7 @@ public class TestRedis {
      */
     @Test
     public void testObj() throws Exception {
-        User user=new User("aa@126.com", "aa", "aa123456", "aa","123");
+        User user=new User("aa","aa","aa","aa","aa","aa",12);
         ValueOperations<String, User> operations=redisTemplate.opsForValue();
         operations.set("com.wls.diypro.model", user);
         operations.set("com.wls.diypro.model", user,1,TimeUnit.MINUTES);
