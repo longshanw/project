@@ -3,9 +3,9 @@ package com.wls.projects.diypro.service.impl;
 import com.wls.projects.diypro.enums.RespEnum;
 import com.wls.integrateplugs.exception.MyException;
 import com.wls.integrateplugs.JdbcTemplate.dao.IOrderInfoDao;
-import com.wls.integrateplugs.jpa.IOrderInfoMapper;
+import com.wls.integrateplugs.jpa.primary.repository.IOrderInfoRepository;
 import com.wls.projects.diypro.mapper.OrderInfoMapper;
-import com.wls.projects.diypro.model.OrderInfo;
+import com.wls.integrateplugs.jpa.primary.model.OrderInfo;
 import com.wls.projects.diypro.service.IOrderInfoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,7 +25,7 @@ public class OrderInfoServiceImpl implements IOrderInfoService {
     Logger logger = LoggerFactory.getLogger(OrderInfoServiceImpl.class);
 
     @Autowired
-    private IOrderInfoMapper iOrderInfoMapper;
+    private IOrderInfoRepository iOrderInfoRepository;
 
     @Autowired
     private OrderInfoMapper orderInfoMapper;
@@ -36,7 +36,7 @@ public class OrderInfoServiceImpl implements IOrderInfoService {
 
     @Override
     public List<OrderInfo> getOrders() throws Exception {
-        return iOrderInfoMapper.findAll();
+        return iOrderInfoRepository.findAll();
     }
 
     @Override
@@ -48,13 +48,13 @@ public class OrderInfoServiceImpl implements IOrderInfoService {
     @Override
     public OrderInfo updateOrder(Integer id, OrderInfo orderInfo) throws Exception {
         orderInfo.setId(id);
-        return iOrderInfoMapper.save(orderInfo);
+        return iOrderInfoRepository.save(orderInfo);
     }
 
     @Override
     public void deleteOrder(Integer id) throws Exception {
         //iOrderInfoMapper.delete(2);
-        iOrderInfoMapper.delete(id);
+        iOrderInfoRepository.delete(id);
     }
 
     @Transactional
@@ -62,10 +62,10 @@ public class OrderInfoServiceImpl implements IOrderInfoService {
     public void addOrderTrans() throws Exception {
         OrderInfo orderInfo1 = new OrderInfo();
         orderInfo1.setOrderNumber("1001");
-        iOrderInfoMapper.save(orderInfo1);
+        iOrderInfoRepository.save(orderInfo1);
         OrderInfo orderInfo2 = new OrderInfo();
         orderInfo1.setOrderNumber("100200000");
-        iOrderInfoMapper.save(orderInfo2);
+        iOrderInfoRepository.save(orderInfo2);
     }
 
 

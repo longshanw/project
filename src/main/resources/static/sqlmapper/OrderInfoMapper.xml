@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wls.projects.diypro.mapper.OrderInfoMapper" >
-  <resultMap id="BaseResultMap" type="com.wls.projects.diypro.model.OrderInfo" >
+  <resultMap id="BaseResultMap" type="com.wls.integrateplugs.jpa.primary.model.OrderInfo" >
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="address_detail" property="addressDetail" jdbcType="VARCHAR" />
     <result column="area" property="area" jdbcType="VARCHAR" />
@@ -27,7 +27,7 @@
     delete from order_info
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.wls.projects.diypro.model.OrderInfo" >
+  <insert id="insert" parameterType="com.wls.integrateplugs.jpa.primary.model.OrderInfo" >
     insert into order_info (id, address_detail, area, 
       city, order_number, order_status, 
       order_time, province, receiver, 
@@ -37,7 +37,7 @@
       #{orderTime,jdbcType=TIMESTAMP}, #{province,jdbcType=VARCHAR}, #{receiver,jdbcType=VARCHAR}, 
       #{street,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.wls.projects.diypro.model.OrderInfo" >
+  <insert id="insertSelective" parameterType="com.wls.integrateplugs.jpa.primary.model.OrderInfo" >
     insert into order_info
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -104,7 +104,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.wls.projects.diypro.model.OrderInfo" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.wls.integrateplugs.jpa.primary.model.OrderInfo" >
     update order_info
     <set >
       <if test="addressDetail != null" >
@@ -137,7 +137,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.wls.projects.diypro.model.OrderInfo" >
+  <update id="updateByPrimaryKey" parameterType="com.wls.integrateplugs.jpa.primary.model.OrderInfo" >
     update order_info
     set address_detail = #{addressDetail,jdbcType=VARCHAR},
       area = #{area,jdbcType=VARCHAR},

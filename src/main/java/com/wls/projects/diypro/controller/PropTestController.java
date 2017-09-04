@@ -1,7 +1,7 @@
 package com.wls.projects.diypro.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.wls.projects.diypro.model.OrderInfo;
+import com.wls.integrateplugs.jpa.primary.model.OrderInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;

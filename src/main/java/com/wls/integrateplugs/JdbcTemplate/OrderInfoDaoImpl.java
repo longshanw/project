@@ -1,7 +1,7 @@
 package com.wls.integrateplugs.JdbcTemplate;
 
 import com.wls.integrateplugs.JdbcTemplate.dao.IOrderInfoDao;
-import com.wls.projects.diypro.model.OrderInfo;
+import com.wls.integrateplugs.jpa.primary.model.OrderInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;

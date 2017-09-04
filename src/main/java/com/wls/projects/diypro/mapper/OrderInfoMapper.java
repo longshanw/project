@@ -1,6 +1,6 @@
 package com.wls.projects.diypro.mapper;
 
-import com.wls.projects.diypro.model.OrderInfo;
+import com.wls.integrateplugs.jpa.primary.model.OrderInfo;
 import org.springframework.stereotype.Repository;
 
 @Repository

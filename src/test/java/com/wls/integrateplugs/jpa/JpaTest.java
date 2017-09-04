@@ -1,9 +1,9 @@
 package com.wls.integrateplugs.jpa;
 
-import com.wls.integrateplugs.jpa.model.primary.User;
-import com.wls.integrateplugs.jpa.model.primary.UserRepository;
-import com.wls.integrateplugs.jpa.model.second.Message;
-import com.wls.integrateplugs.jpa.model.second.MessageRepository;
+import com.wls.integrateplugs.jpa.primary.model.User;
+import com.wls.integrateplugs.jpa.primary.repository.UserRepository;
+import com.wls.integrateplugs.jpa.second.model.Message;
+import com.wls.integrateplugs.jpa.second.reposity.MessageRepository;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

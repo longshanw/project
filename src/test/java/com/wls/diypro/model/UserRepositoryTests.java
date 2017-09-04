@@ -6,15 +6,13 @@ package com.wls.diypro.model;
 import java.text.DateFormat;
 import java.util.Date;
 
-import com.wls.integrateplugs.jpa.IUserRepository;
+import com.wls.integrateplugs.jpa.primary.repository.IUserRepository;
 import com.wls.projects.diypro.model.User;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Profile;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 

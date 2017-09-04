@@ -1,6 +1,6 @@
 package com.wls.diypro.test.jdbcTemplateTest;
 
-import com.wls.projects.diypro.model.OrderInfo;
+import com.wls.integrateplugs.jpa.primary.model.OrderInfo;
 import com.wls.projects.diypro.service.IOrderInfoService;
 import junit.framework.Assert;
 import org.junit.Before;

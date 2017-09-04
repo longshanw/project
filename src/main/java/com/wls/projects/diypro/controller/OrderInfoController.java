@@ -1,7 +1,7 @@
 package com.wls.projects.diypro.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.wls.projects.diypro.model.OrderInfo;
+import com.wls.integrateplugs.jpa.primary.model.OrderInfo;
 import com.wls.projects.diypro.service.IOrderInfoService;
 import com.wls.projects.diypro.util.http.RespUtil;
 import org.mybatis.spring.annotation.MapperScan;

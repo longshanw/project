@@ -5,7 +5,7 @@ package com.wls.projects.diypro.controller;
  */
 import java.util.*;
 
-import com.wls.integrateplugs.jpa.IUserRepository;
+import com.wls.integrateplugs.jpa.primary.repository.IUserRepository;
 import com.wls.projects.diypro.model.User;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
