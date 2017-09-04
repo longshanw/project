@@ -1,7 +1,7 @@
 package com.wls.integrateplugs.exception.handle;
 
 import com.wls.integrateplugs.exception.MyException;
-import com.wls.projects.diypro.util.http.RespUtil;
+import com.wls.integrateplugs.mvc.util.http.RespUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ControllerAdvice;

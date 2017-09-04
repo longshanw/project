@@ -1,6 +1,6 @@
 package com.wls.integrateplugs.exception;
 
-import com.wls.projects.diypro.enums.RespEnum;
+import com.wls.integrateplugs.mvc.enums.RespEnum;
 
 /**
  * Created by wls on 2017/8/7.

@@ -19,7 +19,7 @@ public class HttpAspect {
 
     private final static Logger logger = LoggerFactory.getLogger(HttpAspect.class);
 
-    @Pointcut("execution(public * com.wls.projects.diypro.controller.OrderInfoController.*(..))")
+    @Pointcut("execution(public * com.wls.integrateplugs.mvc.controller.OrderInfoController.*(..))")
     public void log(){
 
     }

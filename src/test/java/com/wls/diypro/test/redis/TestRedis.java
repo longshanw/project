@@ -1,7 +1,7 @@
 package com.wls.diypro.test.redis;
 
 
-import com.wls.projects.diypro.model.User;
+import com.wls.integrateplugs.jpa.second.model.User;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
