@@ -1,4 +1,4 @@
-package com.wls.integrateplugs.springboot.controller;
+package com.wls.integrateplugs.hello.controller;
 
 /**
  * Created by wls on 2017/8/24.
@@ -25,6 +25,10 @@ public class HelloController {
         return "hello world";
     }
 
+    @RequestMapping("/helloWorld")
+    public String index() {
+        return "Hello World";
+    }
 
     /**
      * 使用@RestController时，则使用ModelAndView显示页面
