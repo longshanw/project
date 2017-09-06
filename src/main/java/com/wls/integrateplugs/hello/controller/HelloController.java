@@ -30,18 +30,9 @@ public class HelloController {
         return "Hello World";
     }
 
-    /**
-     * 使用@RestController时，则使用ModelAndView显示页面
-     * @param map
-     * @return
-     */
-    @ApiIgnore
-    @RequestMapping(value = "/helloThymeleaf",method = RequestMethod.GET)
-    public ModelAndView index(ModelMap map) {
-        ModelAndView mv = new ModelAndView("index");
-        map.addAttribute("host", "http://blog.didispace.com");
-        return mv;
-    }
+
+
+
 
     /**
      * 共享session

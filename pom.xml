@@ -123,6 +123,18 @@
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
+        <!--    freemarker      -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
+
+        <!--    velocity        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-velocity</artifactId>
+            <version>1.4.7.RELEASE</version>
+        </dependency>
 
         <!--        mail        -->
         <dependency>
@@ -154,6 +166,8 @@
             <artifactId>spring-test</artifactId>
             <version>4.3.10.RELEASE</version>
         </dependency>
+
+
     </dependencies>
 
     <build>
@@ -161,6 +175,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.mybatis.generator</groupId>

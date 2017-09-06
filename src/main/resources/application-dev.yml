@@ -21,6 +21,19 @@ spring:
     encoding: utf-8
     content-type: text/html
     cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    check-template-location: true
+  velocity:
+    charset: UTF-8
+    properties:
+      input:
+        encoding: UTF-8
+      output:
+        encoding: UTF-8
+    resourceLoaderPath: /templates/
+    suffix: .*
+#   toolbox-config-location: /WEB-INF/toolbox.xml
   output:
     ansi:
       enabled: always
@@ -98,3 +111,18 @@ orderInfo:
 #        productName:  商品2
 #        unitPrice:  10.01
 #        count:  1
+
+com.didispace.blog:
+  name: 程序猿DD
+  title: Spring Boot教程
+  desc: ${com.didispace.blog.name}正在努力写《${com.didispace.blog.title}》
+# 随机字符串
+  value: ${random.value}
+# 随机int
+  number: ${random.int}
+# 随机long
+  bignumber: ${random.long}
+# 10以内的随机数
+  test1: ${random.int(10)}
+# 10-20的随机数
+  test2: ${random.int[10,20]}

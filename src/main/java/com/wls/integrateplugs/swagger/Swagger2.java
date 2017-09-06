@@ -25,7 +25,7 @@ public class Swagger2 {
         return new Docket(DocumentationType.SWAGGER_2)
             .apiInfo(apiInfo())
             .select()
-            .apis(RequestHandlerSelectors.basePackage("com.wls.diypro.controller"))
+            .apis(RequestHandlerSelectors.basePackage("com.wls"))
             .paths(PathSelectors.any())
             .build();
     }
