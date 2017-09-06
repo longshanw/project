@@ -30,7 +30,7 @@ public class UserRepositoryTests {
         DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
         String formattedDate = dateFormat.format(date);
 
-        iUserRepository.save(new User("aa","aa","aa","aa","aa","aa",12));
+//        iUserRepository.save(new User("aa","aa","aa","aa","aa","aa",12));
 //        iUserRepository.save(new User("bb","bb","bb","bb","bb","bb",13));
 //        iUserRepository.save(new User("cc","cc","cc","cc","cc","cc",14));
 

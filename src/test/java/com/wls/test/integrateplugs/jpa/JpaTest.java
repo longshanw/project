@@ -29,15 +29,15 @@ public class JpaTest {
     @Test
     public void test() throws Exception {
 
-        userRepository.save(new User("aa","aa","aa","aa","aa","aa",12));
-        userRepository.save(new User("bb","bb","bb","bb","bb","bb",13));
-        userRepository.save(new User("cc","cc","cc","cc","cc","cc",14));
+//        userRepository.save(new User("aa","aa","aa","aa","aa","aa",12));
+//        userRepository.save(new User("bb","bb","bb","bb","bb","bb",13));
+//        userRepository.save(new User("cc","cc","cc","cc","cc","cc",14));
 
-        Assert.assertEquals(3, userRepository.findAll().size());
+        Assert.assertEquals(2, userRepository.findAll().size());
 
-        messageRepository.save(new Message("o1", "aaaaaaaaaa"));
-        messageRepository.save(new Message("o2", "bbbbbbbbbb"));
-        messageRepository.save(new Message("o3", "cccccccccc"));
+//        messageRepository.save(new Message("o1", "aaaaaaaaaa"));
+//        messageRepository.save(new Message("o2", "bbbbbbbbbb"));
+//        messageRepository.save(new Message("o3", "cccccccccc"));
 
         Assert.assertEquals(3, messageRepository.findAll().size());
 
