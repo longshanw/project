@@ -1,4 +1,4 @@
-package com.wls.diypro.task;
+package com.wls.test.integrateplugs.task;
 
 import com.wls.integrateplugs.task.ScheduledTasks;
 import org.junit.Test;

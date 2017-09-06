@@ -1,4 +1,4 @@
-package com.wls.diypro.test.javamail;
+package com.wls.test.integrateplugs.mail;
 
 import com.wls.integrateplugs.mail.service.IMailService;
 import org.junit.Test;

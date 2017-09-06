@@ -1,4 +1,4 @@
-package com.wls.diypro.test.jdbcTemplateTest;
+package com.wls.test.integrateplugs.jdbcTemplate;
 
 import com.wls.integrateplugs.jpa.primary.model.OrderInfo;
 import com.wls.integrateplugs.mvc.service.IOrderInfoService;

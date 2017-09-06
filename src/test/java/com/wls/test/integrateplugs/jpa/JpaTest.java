@@ -1,4 +1,4 @@
-package com.wls.integrateplugs.jpa;
+package com.wls.test.integrateplugs.jpa;
 
 import com.wls.integrateplugs.jpa.primary.model.User;
 import com.wls.integrateplugs.jpa.primary.repository.UserRepository;
@@ -29,13 +29,11 @@ public class JpaTest {
     @Test
     public void test() throws Exception {
 
-        userRepository.save(new User("aaa", 10));
-        userRepository.save(new User("bbb", 20));
-        userRepository.save(new User("ccc", 30));
-        userRepository.save(new User("ddd", 40));
-        userRepository.save(new User("eee", 50));
+        userRepository.save(new User("aa","aa","aa","aa","aa","aa",12));
+        userRepository.save(new User("bb","bb","bb","bb","bb","bb",13));
+        userRepository.save(new User("cc","cc","cc","cc","cc","cc",14));
 
-        Assert.assertEquals(5, userRepository.findAll().size());
+        Assert.assertEquals(3, userRepository.findAll().size());
 
         messageRepository.save(new Message("o1", "aaaaaaaaaa"));
         messageRepository.save(new Message("o2", "bbbbbbbbbb"));

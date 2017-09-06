@@ -6,7 +6,7 @@ package com.wls.integrateplugs.swagger;
 import java.util.*;
 
 import com.wls.integrateplugs.jpa.primary.repository.IUserRepository;
-import com.wls.integrateplugs.jpa.second.model.User;
+import com.wls.integrateplugs.jpa.primary.model.User;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;

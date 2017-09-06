@@ -1,32 +1,47 @@
 package com.wls.integrateplugs.jpa.primary.model;
 
+/**
+ * Created by wls on 2017/8/24.
+ */
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-/**
- * @author 程序猿DD
- * @version 1.0.0
- * @date 16/3/21 下午3:35.
- * @blog http://blog.didispace.com
- */
 @Entity
-public class User {
+public class User implements Serializable {
 
+    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue
     private Long id;
-
+    @Column(nullable = false, unique = true)
+    private String userName;
+    @Column(nullable = false)
+    private String passWord;
+    @Column(nullable = false, unique = true)
+    private String email;
+    @Column(nullable = true, unique = true)
+    private String nickName;
+    @Column(nullable = false)
+    private String regTime;
     @Column(nullable = false)
     private String name;
-
     @Column(nullable = false)
     private Integer age;
 
-    public User(){}
+    public User() {
+        super();
+    }
 
-    public User(String name, Integer age) {
+    public User(String userName, String passWord, String email, String nickName, String regTime, String name, Integer age) {
+        this.userName = userName;
+        this.passWord = passWord;
+        this.email = email;
+        this.nickName = nickName;
+        this.regTime = regTime;
         this.name = name;
         this.age = age;
     }
@@ -34,9 +49,38 @@ public class User {
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
+    }
+    public String getUserName() {
+        return userName;
+    }
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+    public String getPassWord() {
+        return passWord;
+    }
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public String getNickName() {
+        return nickName;
+    }
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
+    public String getRegTime() {
+        return regTime;
+    }
+    public void setRegTime(String regTime) {
+        this.regTime = regTime;
     }
 
     public String getName() {
@@ -54,5 +98,4 @@ public class User {
     public void setAge(Integer age) {
         this.age = age;
     }
-
 }

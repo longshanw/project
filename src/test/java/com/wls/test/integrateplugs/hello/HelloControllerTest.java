@@ -1,4 +1,4 @@
-package com.wls.diypro.controller;
+package com.wls.test.integrateplugs.hello;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;

@@ -1,4 +1,4 @@
-package com.wls.diypro.test.property;
+package com.wls.test.integrateplugs.property;
 
 import com.wls.integrateplugs.property.DiyProperties;
 import org.junit.Assert;

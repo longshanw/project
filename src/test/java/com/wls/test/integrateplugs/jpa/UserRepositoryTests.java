@@ -1,4 +1,4 @@
-package com.wls.diypro.model;
+package com.wls.test.integrateplugs.jpa;
 
 /**
  * Created by wls on 2017/8/24.
@@ -7,7 +7,7 @@ import java.text.DateFormat;
 import java.util.Date;
 
 import com.wls.integrateplugs.jpa.primary.repository.IUserRepository;
-import com.wls.integrateplugs.jpa.second.model.User;
+import com.wls.integrateplugs.jpa.primary.model.User;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

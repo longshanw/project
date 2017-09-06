@@ -1,4 +1,4 @@
-package com.wls.integrateplugs.JdbcTemplate.datasource;
+package com.wls.integrateplugs.datasource;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;

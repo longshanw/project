@@ -1,6 +1,6 @@
 server:
   port: 8081
-  context-path: /diypro
+  context-path: /project
 spring:
   profiles:
     active: dev

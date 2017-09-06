@@ -2,6 +2,7 @@ package com.wls.integrateplugs.jpa.second.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.autoconfigure.orm.jpa.JpaProperties;
 import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
 import org.springframework.context.annotation.Bean;
@@ -24,7 +25,8 @@ import java.util.Map;
     basePackages= { "com.wls.integrateplugs.jpa.second.reposity" }) //设置Repository所在位置
 public class SecondaryConfig {
 
-    @Autowired @Qualifier("secondaryDataSource")
+    @Autowired
+    @Qualifier("secondaryDataSource")
     private DataSource secondaryDataSource;
 
     @Bean(name = "entityManagerSecondary")

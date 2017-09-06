@@ -3,13 +3,13 @@ spring:
     primary:
       driver-class-name: com.mysql.jdbc.Driver
   #    url: jdbc:mysql://192.168.159.128:3306/mydb
-      url: jdbc:mysql://192.168.11.132:3306/mydb
+      url: jdbc:mysql://192.168.223.128:3306/db1
       username: wls
       password: Wls141215!
     secondary:
       driver-class-name: com.mysql.jdbc.Driver
   #    url: jdbc:mysql://192.168.159.128:3306/mydb
-      url: jdbc:mysql://192.168.11.132:3306/shopmall
+      url: jdbc:mysql://192.168.223.128:3306/db2
       username: wls
       password: Wls141215!
   jpa:
@@ -42,7 +42,7 @@ spring:
   redis:
     database: 0
 #    host: 192.168.159.128
-    host: 192.168.11.132
+    host: 192.168.223.128
     port: 6379
     password: Wls141215!
     pool:
@@ -57,7 +57,7 @@ spring:
     # 连接超时时间（毫秒）
     timeout: 0
 mybatis:
-  type-aliases-package: com.wls.projects.diypro.model
+  type-aliases-package: com.wls.integrateplugs.mybatis.model
   mapper-locations: classpath:static/sqlmapper/*.xml
   check-config-location: true
 #  config-location: classpath:mybatis/mybatis-config.xml
